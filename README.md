@@ -20,13 +20,9 @@ There are certain steps needs to be completed before making actual project using
 Some References/observation that I looked after for this projects:
 
 1. [IncrediBox](https://iconstore.co/)
-```This one is website where I found some awesome sounds of Music instrument```
-
-2. [Humanbeatboc](https://www.humanbeatbox.com/filter/miscellaneous-effects)
+2. [Humanbeatboc](https://www.humanbeatbox.com/filter/miscellaneous-effects) ```This one is website where I found some awesome sounds of Music instrument```
 3. [OrangeMusicSounds](http://www.orangefreesounds.com/category/music/classical-music/)
-```References for interface```
-
-4. [beatBox App](https://play.google.com/store/apps/details?id=com.appbott.music.player&hl=en) 
+4. [beatBox App](https://play.google.com/store/apps/details?id=com.appbott.music.player&hl=en) ```Reference for interface```
 
 
 ### Authors
