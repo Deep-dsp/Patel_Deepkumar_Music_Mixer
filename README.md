@@ -13,7 +13,7 @@ There are certain steps needs to be completed before making actual project using
 2. Prioritize each and every work and start working according to that
 3. Visualize the data and carve ideas into blank paper
 4. Use ```Adobe Illustrator``` and ```Adobe Photoshop``` to create digital design from your best paper sketch
-5. Create web page using ```HTML```, ```CSS``` and ```Javascript```.
+5. Create web page using ```HTML```, ```CSS``` and ```Javascript[--- DRAG & DROP--- And --- webAudio APIS --- events]```.
 6. Validate your code and make sure that everything works fine according to the plan 
 7. Launch website
 
