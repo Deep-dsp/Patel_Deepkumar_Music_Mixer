@@ -47,3 +47,14 @@ header
   display: flex;
   justify-content: flex-end;
 }
+
+/* Main comtainer section styling starts here*/
+
+.mainContainer
+{
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+}
+
+/* Main comtainer section styling ends here */
