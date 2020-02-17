@@ -81,12 +81,26 @@ header
   border-radius: 50%;
 }
 
+.leftBox object:hover, .rightBox object:hover
+{
+  transform: scale(1.1);
+  transition: 0.5s ease;
+  box-shadow: 4px 2px 4px 2px #301934;
+}
+
 .screen
 {
   width: 800px;
   height:500px;
   background-color: grey;
   border-radius: 20px;
+}
+
+.dropSquare
+{
+  height: 100px;
+  border-radius: 20px;
+  background-color: green;
 }
 
 .btnSection
