@@ -6,9 +6,10 @@
 
         console.log(intruImages);
 
-  function allowDrag()
+  function allowDrag(event)
   {
     console.log('Drag starts');
+    event.dataTransfer.setData('text/plain', this.id);
   }
 
   function dragEnd()
