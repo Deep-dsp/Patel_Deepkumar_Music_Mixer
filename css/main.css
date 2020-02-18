@@ -7,10 +7,10 @@ body
 {
   font-family: 'Kaushan Script', cursive;
   width: 90%;
-  /* background-image: url("../images/ref_01.jpg");
+  /*background-image: url("../images/ref_01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 1%; */
+  background-position:  left; */
 }
 
 header
@@ -75,13 +75,13 @@ header
   border-radius: 15px;
 }
 
-.leftBox object, .rightBox object{
+.leftBox img, .rightBox object{
   margin-bottom: 25px;
   border: 3px solid #4B0082;
   border-radius: 50%;
 }
 
-.leftBox object:hover, .rightBox object:hover
+.leftBox img:hover, .rightBox object:hover
 {
   transform: scale(1.1);
   transition: 0.5s ease;
@@ -101,6 +101,14 @@ header
   height: 100px;
   border-radius: 20px;
   background-color: green;
+  display: flex;
+}
+
+.drop-zone
+{
+  width: 133.33px;
+  height: 100px;
+  border: 1px dashed #fff;
 }
 
 .btnSection
