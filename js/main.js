@@ -2,7 +2,7 @@
 
   const musicBoard = document.querySelector('.screen .dropSquare'),
         intruImages = document.querySelectorAll('.fill'),
-        dropZone = document.querySelector('.drop-zone');
+        dropZone = document.querySelectorAll('.drop-zone');
 
         console.log(intruImages);
 
@@ -12,12 +12,19 @@
     event.dataTransfer.setData('text/plain', this.id);
   }
 
-  function dragEnd()
+  function allowDragOver(event)
   {
-    console.log('Drag ends');
+  	event.preventdefault();
+  	console.log('Dragged Over Drop Zone');
   }
 
+  // function dragEnd()
+  // {
+  //   console.log('Drag ends');
+  // }
+
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
-  intruImages.forEach(piece => piece.addEventListener('dragend',dragEnd));
+  intruImages.forEach(zone => zone.addEventListener('dragover', allowDragOver));
+  // intruImages.forEach(piece => piece.addEventListener('dragend',dragEnd));
 
 })();
