@@ -25,6 +25,7 @@
 
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
   intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
-  // intruImages.forEach(piece => piece.addEventListener('dragend',dragEnd));
+  dropZone.forEach(zones => zones.addEventListener('dragover',allowDragOver));
+
 
 })();
