@@ -4,27 +4,27 @@
         intruImages = document.querySelectorAll('.fill'),
         dropZone = document.querySelectorAll('.drop-zone');
 
-        console.log(intruImages);
+        // console.log(intruImages);
 
   function allowDrag(event)
   {
     console.log('Drag starts');
-    event.dataTransfer.setData('text/plain', this.id);
+    // event.dataTransfer.setData('text/plain', this.id);
   }
 
   function allowDragOver(event)
   {
-  	event.preventdefault();
+  	// event.preventdefault();
   	console.log('Dragged Over Drop Zone');
   }
 
-  // function dragEnd()
-  // {
-  //   console.log('Drag ends');
-  // }
+  function dragEnd()
+  {
+    console.log('Drag ends');
+  }
 
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
-  intruImages.forEach(zone => zone.addEventListener('dragover', allowDragOver));
+  intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
   // intruImages.forEach(piece => piece.addEventListener('dragend',dragEnd));
 
 })();

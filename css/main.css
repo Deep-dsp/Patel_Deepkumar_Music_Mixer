@@ -75,13 +75,13 @@ header
   border-radius: 15px;
 }
 
-.leftBox img, .rightBox object{
+.leftBox img, .rightBox img{
   margin-bottom: 25px;
   border: 3px solid #4B0082;
   border-radius: 50%;
 }
 
-.leftBox img:hover, .rightBox object:hover
+.leftBox img:hover, .rightBox img:hover
 {
   transform: scale(1.1);
   transition: 0.5s ease;
