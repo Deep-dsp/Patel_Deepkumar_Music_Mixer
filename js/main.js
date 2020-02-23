@@ -29,6 +29,9 @@
 
     imgScale.style.width = '80px';
     imgScale.style.height = '80px';
+    imgScale.style.position = "relative";
+    imgScale.style.left = '30px';
+    imgScale.style.top = '10px';
 
 
   }
