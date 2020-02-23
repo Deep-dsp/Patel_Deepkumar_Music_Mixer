@@ -9,23 +9,36 @@
   function allowDrag(event)
   {
     console.log('Drag starts');
-    // event.dataTransfer.setData('text/plain', this.id);
+    event.dataTransfer.setData('text/plain', this.id);
   }
 
   function allowDragOver(event)
   {
-  	// event.preventdefault();
+  	event.preventDefault();
   	console.log('Dragged Over Drop Zone');
   }
 
-  function dragEnd()
+  function dragEnd(event)
   {
-    console.log('Drag ends');
+    event.preventDefault();
+    console.log('Drag ends(Dropped Over Zone)');
+
+    let currentImage = event.dataTransfer.getData('text/plain');
+
+    let imgScale = event.target.appendChild(document.querySelector(`#${currentImage}`));
+
+    imgScale.style.width = '80px';
+    imgScale.style.height = '80px';
+
+
   }
 
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
-  intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
-  dropZone.forEach(zones => zones.addEventListener('dragover',allowDragOver));
+  // intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
+  dropZone.forEach(zones => { zones.addEventListener('dragover',allowDragOver);
+                              zones.addEventListener('drop',dragEnd);
+                              });
+
 
 
 })();
