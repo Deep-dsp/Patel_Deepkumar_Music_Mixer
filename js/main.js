@@ -34,14 +34,13 @@
     imgScale.style.left = '30px';
     imgScale.style.top = '10px';
 
-    playTrack();
+    playTrack(this.dataset.trackref);
 
   }
 
-  function playTrack()
+  function playTrack(ref)
   {
-    let audioSource = this.dataset.trackref;
-    audioElement.src = `audio/${audioSource}.mp3`;
+    audioElement.src = `audio/${ref}.mp3`;
     audioElement.load();
     audioElement.play();
   }
