@@ -33,13 +33,16 @@
     imgScale.style.position = "relative";
     imgScale.style.left = '30px';
     imgScale.style.top = '10px';
+    imgScale.style.border = "2px solid #fff";
+    imgScale.style.borderRadius = "50%";
 
-    playTrack(this.dataset.trackref);
 
+    playTrack(currentImage);
   }
 
   function playTrack(ref)
   {
+
     audioElement.src = `audio/${ref}.mp3`;
     audioElement.load();
     audioElement.play();
@@ -48,8 +51,9 @@
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
   // intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
   dropZone.forEach(zones => { zones.addEventListener('dragover',allowDragOver);
-                              zones.addEventListener('drop',dragEnd);
-                              });
+                             zones.addEventListener('drop',dragEnd);
+                             });
+
 
 
 
