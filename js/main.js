@@ -4,6 +4,7 @@
         intruImages = document.querySelectorAll('.fill'),
         dropZone = document.querySelectorAll('.drop-zone'),
         audioElement = document.querySelector('audio');
+        audioMaker = document.querySelector('audio');
 
         // console.log(intruImages);
 
@@ -37,16 +38,16 @@
     imgScale.style.borderRadius = "50%";
 
 
-    playTrack(currentImage);
-  }
-
-  function playTrack(ref)
-  {
-
-    audioElement.src = `audio/${ref}.mp3`;
+    let audioMaker = document.createElement('audio');
+    audioMaker.addEventListener("ended", function(){
+      document.body.removeChild(audioElement);
+    });
+    audioElement.src = `audio/${currentImage}.mp3`;
+    document.body.appendChild(audioElement);
     audioElement.load();
     audioElement.play();
   }
+
 
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
   // intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
