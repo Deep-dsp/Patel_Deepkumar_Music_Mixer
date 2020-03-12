@@ -26,6 +26,7 @@
     console.log('Drag ends(Dropped Over Zone)');
 
     let currentImage = event.dataTransfer.getData('text/plain');
+    console.log(currentImage);
 
     let imgScale = event.target.appendChild(document.querySelector(`#${currentImage}`));
 
@@ -39,13 +40,14 @@
 
 
     let audioMaker = document.createElement('audio');
-    audioMaker.addEventListener("ended", function(){
-      document.body.removeChild(audioElement);
-    });
-    audioElement.src = `audio/${currentImage}.mp3`;
-    document.body.appendChild(audioElement);
-    audioElement.load();
-    audioElement.play();
+    for(let i=0;i<3;i++)
+    {
+        audioElement.src = `audio/${currentImage}.mp3`;
+        document.body.appendChild(audioElement);
+        audioElement.load();
+        audioElement.play();
+    }
+    document.body.removeChild(audioMaker);
   }
 
 
