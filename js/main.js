@@ -3,8 +3,11 @@
   const musicBoard = document.querySelector('.screen .dropSquare'),
         intruImages = document.querySelectorAll('.fill'),
         dropZone = document.querySelectorAll('.drop-zone'),
-        audioElement = document.querySelector('audio');
-        audioMaker = document.querySelector('audio');
+        audioElement = document.querySelector('audio'),
+        audioMaker = document.querySelector('audio'),
+        leftPieces = document.querySelectorAll('.leftBox img'),
+        leftCon = document.querySelector('.leftBox'),
+        resetButton = document.querySelector('button');
 
         // console.log(intruImages);
 
@@ -50,12 +53,23 @@
     document.body.removeChild(audioMaker);
   }
 
+  //reset function
+  function resetContainer()
+  {
+      for(let i=0; i<leftPieces.length;i++)
+      {
+        leftCon.appendChild(leftPieces[i]);
+      }
+  }
 
   intruImages.forEach(piece => piece.addEventListener('dragstart', allowDrag));
   // intruImages.forEach(zone => zone.addEventListener('dragend', dragEnd));
   dropZone.forEach(zones => { zones.addEventListener('dragover',allowDragOver);
                              zones.addEventListener('drop',dragEnd);
                              });
+
+  // reset function addEventListener
+  resetButton.addEventListener("click", resetContainer);
 
 
 
