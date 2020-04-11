@@ -4,9 +4,61 @@
 	<title>Interactive Music Mixer</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" media="screen">
 	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 </head>
 <body>
 
+	<!-- <audio src=""></audio> -->
+
+	<header>
+		<div class="logo">
+			<img src="images/logo_01.svg" alt="Logo">
+		</div>
+		<div class="mainTitle">
+			<p>Interactive Music Mixer</p>
+		</div>
+	</header>
+	<main>
+		<audio src=""></audio>
+		<section class="mainContainer">
+
+			<div class="leftBox">
+				<img data-dragimages="0" data-trackref="violin" dragabble="true" class="fill" src="images/c_Violin.svg" alt="c_Violin" id="violin">
+				<img data-dragimages="1" data-trackref="flute" dragabble="true" class="fill" src="images/c_Flute.svg" alt="c_Flute" id="flute">
+				<img data-dragimages="2" data-trackref="drum" dragabble="true" class="fill" src="images/c_Drum.svg" alt="c_Drum" id="drum">
+
+			</div>
+
+			<section class="screen">
+				<div class="dropSquare">
+					<div class="drop-zone">
+					</div>
+					<div class="drop-zone">
+
+					</div>
+					<div class="drop-zone">
+
+					</div>
+					<div class="drop-zone">
+					</div>
+					<div class="drop-zone">
+					</div>
+					<div class="drop-zone">
+					</div>
+				</div>
+			</section>
+
+			<div class="rightBox">
+				<img data-dragimages="3" data-trackref="guitar" dragabble="true" class="fill" src="images/c_guitar.svg" alt="c_guitar" id="guitar">
+				<img data-dragimages="4" data-trackref="Accodian" dragabble="true" class="fill" src="images/c_accodian.svg" alt="c_accodian" id="Accodian">
+				<img data-dragimages="5" data-trackref="cornet" dragabble="true" class="fill" src="images/c_cornet.svg" alt="c_cornet" id="cornet">
+			</div>
+
+		</section>
+		<section class="btnSection">
+			<button type="button" name="button">Reset</button>
+		</section>
+	</main>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
